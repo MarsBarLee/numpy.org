@@ -1,3 +1,13 @@
+{{ $jsTemplate := resources.Get "js/installerWidget.js" }}
+{{ $js := $jsTemplate | resources.ExecuteAsTemplate "installerWidget.js" . }}
+<script type="text/javascript" src="{{ $js.Permalink }}"></script>
+
+<script type="text/javascript">
+ window.onload = function () {
+   logInstallerOptions();
+ }
+</script>
+
 {{- $installationWidget := .Site.Params.installationWidget }}
 <section class="installationWidget">
     <div class="container">
