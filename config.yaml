@@ -72,6 +72,12 @@ params:
     features:
     - title: Quality 1
       text: Text on Quality 1
+  installerOptions:
+    linux:
+      conda: "conda install numpy"
+      pip: "pip install numpy"
+    mac:
+    windows:
 
 languages:
   en:
@@ -198,3 +204,4 @@ languages:
               link: /nl/privacy
             - text: Press kit
               link: /nl/press-kit
+
